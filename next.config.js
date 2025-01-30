@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
+    basePath: '/MyDailyUpdateApp',
     images: {
         unoptimized: true,
     },
-    basePath: '/MyDailyUpdateApp',
     assetPrefix: '/MyDailyUpdateApp/',
+    trailingSlash: true,
 }
 
 module.exports = nextConfig 
