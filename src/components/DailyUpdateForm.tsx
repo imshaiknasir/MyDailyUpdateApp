@@ -41,7 +41,7 @@ export function DailyUpdateForm() {
     const prompt = `Generate a professional and positive daily update email for ${format(new Date(date), 'dd MM yyyy')} with the following points:\n${updates.filter(u => u.trim()).join('\n')}`
     
     try {
-      const response = await fetch('/MyDailyUpdateApp/api/generate', {
+      const response = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),
