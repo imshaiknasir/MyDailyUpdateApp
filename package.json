@@ -2,6 +2,7 @@
   "name": "daily-update-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://imshaiknasir.github.io/MyDailyUpdateApp",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

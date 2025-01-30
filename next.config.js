@@ -4,6 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    basePath: '/MyDailyUpdateApp',
+    assetPrefix: '/MyDailyUpdateApp/',
 }
 
 module.exports = nextConfig 
