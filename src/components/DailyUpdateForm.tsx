@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { format } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 import { Trash2, Plus, Copy, Send, CalendarIcon } from 'lucide-react'
 import { toast } from 'sonner'
 
@@ -38,11 +38,16 @@ export function DailyUpdateForm() {
     }
 
     setIsGenerating(true)
+    const dateObj = parseISO(date)
+    const formattedDate = format(dateObj, 'dd MM yyyy')
+    const dayOfWeek = format(dateObj, 'EEEE')
+
     const prompt = `
     Here are the inputs for today's email:
     
     Date:
-    <date> ${format(new Date(date), 'dd MM yyyy')}</date>
+    <date>${formattedDate}</date>
+    <day>${dayOfWeek}</day>
     
     Updates:
     <updates>${updates.filter(u => u.trim()).join('\n')}</updates>
