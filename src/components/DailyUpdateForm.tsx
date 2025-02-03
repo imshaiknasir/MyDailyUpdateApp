@@ -38,7 +38,16 @@ export function DailyUpdateForm() {
     }
 
     setIsGenerating(true)
-    const prompt = `Generate a professional and positive daily update email for ${format(new Date(date), 'dd MM yyyy')} with the following points:\n${updates.filter(u => u.trim()).join('\n')}`
+    const prompt = `
+    Here are the inputs for today's email:
+    
+    Date:
+    <date> ${format(new Date(date), 'dd MM yyyy')}</date>
+    
+    Updates:
+    <updates>${updates.filter(u => u.trim()).join('\n')}</updates>
+
+    Please generate an email with the above inputs.`
     
     try {
       const response = await fetch('/api/generate', {
