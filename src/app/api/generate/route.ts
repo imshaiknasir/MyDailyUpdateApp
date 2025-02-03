@@ -14,7 +14,8 @@ Instructions:
    a. A warm, professional greeting
    b. The provided date
    c. A list of updates presented as clear, concise bullet points
-   d. A brief, positive closing
+   d. A brief, positive closing.
+      - And as this is the final update of the day, it should be more positive and encouraging closing statements.
       - But not these:
         - "I'm confident that these efforts will contribute to our ongoing success and improvement. Thank you for your hard work and dedication."
         - "If you have any questions or need assistance, please don't hesitate to reach out."
